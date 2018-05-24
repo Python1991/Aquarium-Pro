@@ -1,0 +1,66 @@
+{% extends 'pages/layout/layout.html' %}
+{% load static %}
+{% block title %}Aqua Pro{% endblock %}
+{% block content %}
+<div>
+    <ul class="ace-thumbnails clearfix">
+
+        {% for product in Products %}
+        <li>
+        	{% for image in product.image.all %}
+            <a href="/products/product_aquatic_plant_packages/aquatic_plant/{{product.id}}" data-rel="colorbox">
+                <img width="150" height="150" alt="150x150" src={% static "assets/images/gallery/" %}{{image.url}} />
+                <div class="text">
+                    <div class="inner">好種</div>
+                </div>
+            </a>
+            {% endfor %}
+            <div>
+                <a href = "#">{{product.name}}
+                </a>
+            </div>
+            <br>
+            <div>
+                難易度：
+                {{product.degree_of_difficulty}}
+                顆星
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div>
+        <ul class="pagination">
+            <li class="disabled">
+                <a href="#">
+                    <i class="ace-icon fa fa-angle-double-left"></i>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="#">1</a>
+            </li>
+
+            <li>
+                <a href="#">2</a>
+            </li>
+
+            <li>
+                <a href="#">3</a>
+            </li>
+
+            <li>
+                <a href="#">4</a>
+            </li>
+
+            <li>
+                <a href="#">5</a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="ace-icon fa fa-angle-double-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

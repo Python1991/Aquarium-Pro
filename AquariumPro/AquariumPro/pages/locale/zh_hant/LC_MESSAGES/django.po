@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-23 14:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/pages/layout/side_bar.html:43
+msgid "水草"
+msgstr "水草"
+
+#: templates/pages/layout/side_bar.html:54
+msgid "landscape_position"
+msgstr "造景位置"
+
+#: templates/pages/layout/side_bar.html:64
+msgid "foreground_plant"
+msgstr "前景草"
+
+#: templates/pages/layout/side_bar.html:73
+msgid "middle_plant"
+msgstr "中景草"
+
+#: templates/pages/layout/side_bar.html:82
+msgid "background_plant"
+msgstr "後景草"
+
+#: templates/pages/layout/side_bar.html:91
+msgid "main_plant"
+msgstr "主景草"
+
+#: templates/pages/layout/side_bar.html:100
+msgid "float_plant"
+msgstr "漂浮品種"
+
+#: templates/pages/layout/side_bar.html:113
+msgid "general_classification"
+msgstr "一般分類"
+
+#: templates/pages/layout/side_bar.html:123
+msgid "陰性水草"
+msgstr "陰性水草"
+
+#: templates/pages/layout/side_bar.html:132
+msgid "莫斯"
+msgstr "莫斯"
+
+#: templates/pages/layout/side_bar.html:141
+msgid "神秘草"
+msgstr "神秘草"
+
+#: templates/pages/layout/side_bar.html:150
+msgid "椒草"
+msgstr "椒草"
+
+#: templates/pages/layout/side_bar.html:159
+msgid "榖精"
+msgstr "榖精"
+
+#: templates/pages/layout/side_bar.html:168
+msgid "太陽草"
+msgstr "太陽草"

@@ -1,0 +1,87 @@
+{% extends 'pages/layout/layout.html' %}
+{% load static %}
+{% block title %}Aqua Pro{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <ul class="ace-thumbnails clearfix">
+
+                    {% if product_aquatic_plant_package %}
+                    <li>
+                        {% for image in product_aquatic_plant_package.images %}
+                        <img width="490" height="490" class="mySlides" src={% static "assets/images/gallery/" %}{{image.url}}>
+                        {% endfor %}
+                            <div class="w3-row-padding w3-section">
+                        {% for image in product_aquatic_plant_package.images %}
+
+                              <div class="w3-col s6">
+                                <img width="200" height="200" class="demo w3-opacity w3-hover-opacity-off" src={% static "assets/images/gallery/" %}{{image.url}} style="width:100%" onclick="currentDiv({{forloop.counter}})">
+                              </div>
+                        {% endfor %}
+                            </div>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-sm-5">
+                <div class="widget-box">
+                    {% if product_aquatic_plant_package %}
+                    <div class="widget-header widget-header-flat">
+                        <h4 class="widget-title">{{product_aquatic_plant_package.name}}</h4>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        內容物包含
+                                    </div>
+                                    <ol>
+                                    {% for ppa in product_aquatic_plant_package.productAquaticPlants.all %}
+                                        <li>
+                                            {{ ppa.aquatic_plant.name }} 
+                                            {{ ppa.quantity }}
+                                            {{ ppa.aquatic_plant.unit.name }} 
+                                            <div>
+                                                藻類程度：{{ ppa.algae_level}}
+                                            </div>
+                                            <div>
+                                                螺類程度：{{ ppa.gastropoda_level}}
+                                            </div>
+                                        </li>
+                                        
+                                    {% endfor%}
+                                    </ol>
+                                    <div>
+                                        價格:
+                                        {{product_aquatic_plant_package.price}}
+                                    </div>
+                                    <div>
+                                        數量：
+                                        {{product_aquatic_plant_package.quantity}}
+                                    </div>
+                                        運送方式:
+                                    {% for shipping in product_aquatic_plant_package.store.shipping.all%}
+                                    <p>
+                                        {{shipping.category}} : {{shipping.name}}
+                                    </p>
+                                    {% endfor%}
+                                </div>
+                            </div>
+
+                            <hr />
+                            <button class="btn btn-success">購買</button>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div><!-- /.col -->
+        </div>
+<div>
+{% endblock %}
